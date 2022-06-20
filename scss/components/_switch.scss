@@ -1,0 +1,20 @@
+@use "../abstract" as *;
+.switch {
+  width: 7rem;
+  height: 3rem;
+  border-radius: 10rem;
+  background-color: $l-dark-gray-blue;
+  &__circle {
+    &:link,
+    &:visited {
+      width: 2rem;
+      height: 2rem;
+      background-color: $color-white;
+      clip-path: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+      margin: 0.5rem;
+      float: right;
+      transition: all 1s ease-in-out;
+    }
+  }
+}

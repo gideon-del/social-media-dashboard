@@ -1,0 +1,67 @@
+@use "../abstract" as *;
+.card {
+  background-color: $l-gray-blue;
+  height: 23rem;
+  width: 36rem;
+  margin: 1rem auto;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 1rem 4rem rgba($color: #000000, $alpha: 0.1);
+  &__pattern {
+    height: 0.5rem;
+    &--fb {
+      background-color: $facebook;
+    }
+    &--ig {
+      background-image: $instagram;
+    }
+    &--twi {
+      background-color: $twitter;
+    }
+    &--you {
+      background-color: $youtube;
+    }
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__img {
+      display: flex;
+      margin: 2rem 0;
+      justify-content: center;
+      width: 100%;
+      img {
+        margin-right: 1rem;
+        transform: scale(1.3);
+      }
+    }
+  }
+  text-align: center;
+  .current-followers {
+    display: flex;
+
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: $font-weight-7;
+    margin: 2rem 0;
+    &--up {
+      color: $lime-green;
+    }
+    &--down {
+      color: $bright-red;
+    }
+    img {
+      width: min(1rem);
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  @media only screen and (min-width: 1440px) {
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+}

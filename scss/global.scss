@@ -1,0 +1,26 @@
+@use "abstract" as *;
+@forward "./base";
+@forward "./components";
+@forward "./pages";
+main {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+header {
+  max-width: 114rem;
+  margin: 0 auto;
+  .container .header-info {
+    border-bottom: 1px solid $l-dark-gray-blue;
+    padding-bottom: 2rem;
+  }
+  .container .theme-switch {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.container {
+  width: 85%;
+  padding: 2rem 0;
+  margin: 2rem auto;
+}

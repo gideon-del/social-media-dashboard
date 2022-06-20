@@ -1,0 +1,9 @@
+.followers-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 114rem;
+  margin: 0 auto;
+  @media only screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
+}

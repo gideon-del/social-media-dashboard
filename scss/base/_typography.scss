@@ -1,0 +1,28 @@
+@use "../abstract" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+}
+.header-primary {
+  font-size: 6rem;
+  font-weight: $font-weight-7;
+}
+.header-secondary {
+  font-size: 2rem;
+  font-weight: $font-weight-7;
+  color: $l-vd-blue;
+  margin-bottom: 0.6rem;
+}
+.paragraph {
+  font-size: 1.6rem;
+  color: $l-dark-gray-blue;
+  font-weight: $font-weight-7;
+}
+.followers {
+  p {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    color: $l-dark-gray-blue;
+    text-transform: uppercase;
+  }
+}
