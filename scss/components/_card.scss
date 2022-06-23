@@ -6,7 +6,7 @@
   margin: 1rem auto;
   border-radius: 7px;
   overflow: hidden;
-  box-shadow: 0 1rem 4rem rgba($color: #000000, $alpha: 0.1);
+  box-shadow: 0 1rem 4rem rgba($color-white, 0.1);
   &__pattern {
     height: 0.5rem;
     &--fb {
@@ -39,29 +39,33 @@
     }
   }
   text-align: center;
-  .current-followers {
-    display: flex;
 
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: $font-weight-7;
-    margin: 2rem 0;
-    &--up {
-      color: $lime-green;
-    }
-    &--down {
-      color: $bright-red;
-    }
-    img {
-      width: min(1rem);
-    }
-  }
   &:not(:last-child) {
     margin-bottom: 3rem;
   }
   @media only screen and (min-width: 1440px) {
     &:not(:last-child) {
-      margin-right: 1.5rem;
+      margin-right: 1rem;
     }
+  }
+}
+.current-followers {
+  display: flex;
+
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: $font-weight-7;
+  margin: 2rem 0;
+  &--up {
+    color: $lime-green;
+  }
+  &--down {
+    color: $bright-red;
+  }
+  img {
+    width: 1.5rem;
+    height: 1rem;
+    margin-top: 0.5rem;
+    display: inline-block;
   }
 }

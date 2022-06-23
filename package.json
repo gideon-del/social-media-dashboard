@@ -1,5 +1,27 @@
 {
   "dependencies": {
     "node-sass": "^7.0.1"
-  }
+  },
+  "name": "social-media-dashboard-with-theme-switcher-master",
+  "description": "Front-ens Mentor Project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass ./scss/global.scss ./style/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gideon-del/social-media-dashboard.git"
+  },
+  "keywords": [
+    "Project"
+  ],
+  "author": "Gideon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gideon-del/social-media-dashboard/issues"
+  },
+  "homepage": "https://github.com/gideon-del/social-media-dashboard#readme"
 }

@@ -1,0 +1,11 @@
+@mixin media($breakpoint) {
+  @if ($breakpoint == desktop) {
+    @media screen and (min-width: 62.5em) {
+      @content;
+    }
+  } @else if($breakpoint == tab-port) {
+    @media screen and (min-width: 48em) {
+      @content;
+    }
+  }
+}

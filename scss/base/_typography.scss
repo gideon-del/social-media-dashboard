@@ -8,13 +8,23 @@ body {
   font-weight: $font-weight-7;
 }
 .header-secondary {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: $font-weight-7;
   color: $l-vd-blue;
   margin-bottom: 0.6rem;
 }
 .paragraph {
   font-size: 1.6rem;
+  color: $l-dark-gray-blue;
+  font-weight: $font-weight-7;
+}
+.header-tetiary {
+  margin-top: 2rem;
+  font-size: 3rem;
+  display: inline-block;
+}
+.card-mini__p {
+  font-size: 1.5rem;
   color: $l-dark-gray-blue;
   font-weight: $font-weight-7;
 }
@@ -25,4 +35,8 @@ body {
     color: $l-dark-gray-blue;
     text-transform: uppercase;
   }
+}
+.overview__header {
+  color: $l-dark-gray-blue;
+  font-size: 2.5rem;
 }
