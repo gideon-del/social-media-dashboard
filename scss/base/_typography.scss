@@ -6,6 +6,9 @@ body {
 .header-primary {
   font-size: 6rem;
   font-weight: $font-weight-7;
+  &__dark {
+    color: $color-white;
+  }
   // white-space: nowrap;
 }
 .header-secondary {

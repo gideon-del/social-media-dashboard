@@ -3,11 +3,20 @@
   width: 100%;
   margin-inline: auto;
   padding: 2.5rem 3rem;
-  background-color: $l-gray-blue;
+
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin: 1rem 0.75rem;
+  &--light {
+    background-color: $l-gray-blue;
+  }
+  &--dark {
+    background-color: $d-desaturated-blue-card;
+    .card-mini__bottom {
+      color: $color-white;
+    }
+  }
   @include media(desktop) {
     margin: 1rem auto;
   }

@@ -32,14 +32,20 @@
         <div class="theme-switch">
           <h2 class="paragraph">Dark Mode</h2>
           <div class="switch">
-            <a href="#" class="switch__circle"></a>
+            <input
+              type="checkbox"
+              name="switch"
+              id="switch"
+              class="switch__input"
+            />
+            <label for="switch" class="switch__button">&nbsp;</label>
           </div>
         </div>
       </div>
     </header>
     <main>
       <section class="followers-section">
-        <div class="card">
+        <div class="card card--light">
           <div class="card__pattern card__pattern--fb">&nbsp;</div>
           <div class="profile">
             <div class="profile__img">
@@ -56,7 +62,7 @@
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="card card--light">
           <div class="card__pattern card__pattern--twi">&nbsp;</div>
           <div class="profile">
             <div class="profile__img">
@@ -73,7 +79,7 @@
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="card card--light">
           <div class="card__pattern card__pattern--ig">&nbsp;</div>
           <div class="profile">
             <div class="profile__img">
@@ -90,7 +96,7 @@
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="card card--light">
           <div class="card__pattern card__pattern--you">&nbsp;</div>
           <div class="profile">
             <div class="profile__img">
@@ -111,7 +117,7 @@
       <section class="overview">
         <h2 class="overview__header">Overview - Today</h2>
         <div class="overview__card">
-          <div class="card-mini">
+          <div class="card-mini card-mini--light">
             <div class="card-mini__top">
               <div class="card-mini__left">
                 <p class="card-mini__p">Page Views</p>
@@ -136,7 +142,7 @@
               </div>
             </div>
           </div>
-          <div class="card-mini">
+          <div class="card-mini card-mini--light">
             <div class="card-mini__top">
               <div class="card-mini__left">
                 <p class="card-mini__p">Likes</p>
@@ -161,7 +167,7 @@
               </div>
             </div>
           </div>
-          <div class="card-mini">
+          <div class="card-mini card-mini--light">
             <div class="card-mini__top">
               <div class="card-mini__left">
                 <p class="card-mini__p">Likes</p>
@@ -186,7 +192,7 @@
               </div>
             </div>
           </div>
-          <div class="card-mini">
+          <div class="card-mini card-mini--light">
             <div class="card-mini__top">
               <div class="card-mini__left">
                 <p class="card-mini__p">Profile Views</p>
@@ -211,7 +217,7 @@
               </div>
             </div>
           </div>
-          <div class="card-mini">
+          <div class="card-mini card-mini--light">
             <div class="card-mini__top">
               <div class="card-mini__left">
                 <p class="card-mini__p">Retweets</p>
@@ -236,7 +242,7 @@
               </div>
             </div>
           </div>
-          <div class="card-mini">
+          <div class="card-mini card-mini--light">
             <div class="card-mini__top">
               <div class="card-mini__left">
                 <p class="card-mini__p">Likes</p>
@@ -261,7 +267,7 @@
               </div>
             </div>
           </div>
-          <div class="card-mini">
+          <div class="card-mini card-mini--light">
             <div class="card-mini__top">
               <div class="card-mini__left">
                 <p class="card-mini__p">Likes</p>
@@ -286,7 +292,7 @@
               </div>
             </div>
           </div>
-          <div class="card-mini">
+          <div class="card-mini card-mini--light">
             <div class="card-mini__top">
               <div class="card-mini__left">
                 <p class="card-mini__p">Total Views</p>
@@ -324,5 +330,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
+    <script src="./index.js"></script>
   </body>
 </html>

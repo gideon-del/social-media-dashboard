@@ -1,12 +1,20 @@
 @use "../abstract" as *;
 .card {
-  background-color: $l-gray-blue;
   height: 23rem;
   width: 36rem;
   margin: 1rem auto;
   border-radius: 7px;
   overflow: hidden;
   box-shadow: 0 1rem 4rem rgba($color-white, 0.1);
+  &--light {
+    background-color: $l-gray-blue;
+  }
+  &--dark {
+    background-color: $d-desaturated-blue-card;
+    .profile .followers .header-primary {
+      color: $color-white;
+    }
+  }
   &__pattern {
     height: 0.5rem;
     &--fb {
@@ -57,7 +65,7 @@
   font-weight: $font-weight-7;
   margin: 2rem 0;
   &--up {
-    color: $lime-green;
+    color: limegreen;
   }
   &--down {
     color: $bright-red;

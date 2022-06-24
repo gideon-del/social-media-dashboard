@@ -1,20 +1,56 @@
 @use "../abstract" as *;
 .switch {
-  width: 7rem;
-  height: 3rem;
-  border-radius: 10rem;
-  background-color: $l-dark-gray-blue;
-  &__circle {
-    &:link,
-    &:visited {
-      width: 2rem;
-      height: 2rem;
+  &__input {
+    display: none;
+  }
+  &__button {
+    width: 7rem;
+    height: 3rem;
+    border-radius: 100px;
+    background-color: $l-dark-gray-blue;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
       background-color: $color-white;
-      clip-path: circle(50% at 50% 50%);
-      -webkit-clip-path: circle(50% at 50% 50%);
-      margin: 0.5rem;
-      float: right;
-      transition: all 1s ease-in-out;
+      margin-top: 0.2rem;
+      margin-right: 0.3rem;
+
+      transition: all 0.5s;
     }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: $color-black;
+      margin-top: 0.2rem;
+      margin-left: 0.3rem;
+      transform: translateX(-4rem);
+      transition: all 0.5s;
+    }
+  }
+  &__input:checked + &__button {
+    background-image: $dark-theme;
+  }
+  &__input:checked + &__button::after {
+    transform: translateX(4rem);
+    margin-left: 0.3rem;
+  }
+  &__input:checked + &__button::before {
+    transform: translateX(0);
+    margin-left: 0.3rem;
   }
 }

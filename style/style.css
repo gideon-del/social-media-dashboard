@@ -17,9 +17,21 @@ body {
   height: 100vh;
 }
 
+.dark {
+  background-color: hsl(230deg, 17%, 14%);
+}
+.dark header .header-secondary {
+  color: hsl(0deg, 0%, 100%);
+}
+
 img,
 picture {
   display: block;
+}
+
+:root {
+  --d-desaturated-blue: hsl(228, 34%, 66%);
+  --l-gray-blue: $l-gray-blue;
 }
 
 body {
@@ -29,6 +41,9 @@ body {
 .header-primary {
   font-size: 6rem;
   font-weight: 700;
+}
+.header-primary__dark {
+  color: hsl(0deg, 0%, 100%);
 }
 
 .header-secondary {
@@ -70,7 +85,6 @@ body {
 }
 
 .card {
-  background-color: hsl(227deg, 47%, 96%);
   height: 23rem;
   width: 36rem;
   margin: 1rem auto;
@@ -78,6 +92,15 @@ body {
   overflow: hidden;
   box-shadow: 0 1rem 4rem rgba(255, 255, 255, 0.1);
   text-align: center;
+}
+.card--light {
+  background-color: hsl(227deg, 47%, 96%);
+}
+.card--dark {
+  background-color: hsl(228deg, 28%, 20%);
+}
+.card--dark .profile .followers .header-primary {
+  color: hsl(0deg, 0%, 100%);
 }
 .card__pattern {
   height: 0.5rem;
@@ -127,7 +150,7 @@ body {
   margin: 2rem 0;
 }
 .current-followers--up {
-  color: hsl(163deg, 72%, 41%);
+  color: limegreen;
 }
 .current-followers--down {
   color: hsl(356deg, 69%, 56%);
@@ -139,21 +162,57 @@ body {
   display: inline-block;
 }
 
-.switch {
+.switch__input {
+  display: none;
+}
+.switch__button {
   width: 7rem;
   height: 3rem;
-  border-radius: 10rem;
+  border-radius: 100px;
   background-color: hsl(228deg, 12%, 44%);
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s;
 }
-.switch__circle:link, .switch__circle:visited {
-  width: 2rem;
-  height: 2rem;
+.switch__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
   background-color: hsl(0deg, 0%, 100%);
-  clip-path: circle(50% at 50% 50%);
-  -webkit-clip-path: circle(50% at 50% 50%);
-  margin: 0.5rem;
-  float: right;
-  transition: all 1s ease-in-out;
+  margin-top: 0.2rem;
+  margin-right: 0.3rem;
+  transition: all 0.5s;
+}
+.switch__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: hsl(0deg, 0%, 0%);
+  margin-top: 0.2rem;
+  margin-left: 0.3rem;
+  transform: translateX(-4rem);
+  transition: all 0.5s;
+}
+.switch__input:checked + .switch__button {
+  background-image: linear-gradient(to right bottom, hsl(210deg, 78%, 56%), hsl(146deg, 68%, 55%));
+}
+.switch__input:checked + .switch__button::after {
+  transform: translateX(4rem);
+  margin-left: 0.3rem;
+}
+.switch__input:checked + .switch__button::before {
+  transform: translateX(0);
+  margin-left: 0.3rem;
 }
 
 .followers-section {
@@ -212,11 +271,19 @@ body {
   width: 100%;
   margin-inline: auto;
   padding: 2.5rem 3rem;
-  background-color: hsl(227deg, 47%, 96%);
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin: 1rem 0.75rem;
+}
+.card-mini--light {
+  background-color: hsl(227deg, 47%, 96%);
+}
+.card-mini--dark {
+  background-color: hsl(228deg, 28%, 20%);
+}
+.card-mini--dark .card-mini__bottom {
+  color: hsl(0deg, 0%, 100%);
 }
 @media screen and (min-width: 62.5em) {
   .card-mini {

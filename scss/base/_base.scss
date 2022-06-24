@@ -14,7 +14,19 @@ body {
   width: 100vw;
   height: 100vh;
 }
+.dark {
+  background-color: $d-vd-blue-bg;
+  header .header-secondary {
+    color: $color-white;
+  }
+}
 img,
 picture {
   display: block;
+}
+:root {
+  //Dark theme
+  --d-desaturated-blue: hsl(228, 34%, 66%);
+  //Light theme
+  --l-gray-blue: $l-gray-blue;
 }
