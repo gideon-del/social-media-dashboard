@@ -90,7 +90,6 @@ body {
   margin: 1rem auto;
   border-radius: 7px;
   overflow: hidden;
-  box-shadow: 0 1rem 4rem rgba(255, 255, 255, 0.1);
   text-align: center;
 }
 .card--light {
@@ -169,7 +168,7 @@ body {
   width: 7rem;
   height: 3rem;
   border-radius: 100px;
-  background-color: hsl(228deg, 12%, 44%);
+  background-image: linear-gradient(to right bottom, hsl(210deg, 78%, 56%), hsl(146deg, 68%, 55%));
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -187,6 +186,7 @@ body {
   background-color: hsl(0deg, 0%, 100%);
   margin-top: 0.2rem;
   margin-right: 0.3rem;
+  transform: translateX(4rem);
   transition: all 0.5s;
 }
 .switch__button::before {
@@ -200,18 +200,18 @@ body {
   background-color: hsl(0deg, 0%, 0%);
   margin-top: 0.2rem;
   margin-left: 0.3rem;
-  transform: translateX(-4rem);
   transition: all 0.5s;
 }
 .switch__input:checked + .switch__button {
-  background-image: linear-gradient(to right bottom, hsl(210deg, 78%, 56%), hsl(146deg, 68%, 55%));
+  background-color: hsl(228deg, 12%, 44%);
+  background-image: none;
 }
 .switch__input:checked + .switch__button::after {
-  transform: translateX(4rem);
+  transform: translateX(0);
   margin-left: 0.3rem;
 }
 .switch__input:checked + .switch__button::before {
-  transform: translateX(0);
+  transform: translateX(-4rem);
   margin-left: 0.3rem;
 }
 
@@ -342,6 +342,12 @@ header .container .header-info {
   border-bottom: 1px solid hsl(228deg, 12%, 44%);
   padding-bottom: 2rem;
 }
+@media screen and (min-width: 48em) {
+  header .container .header-info {
+    flex-grow: 3;
+    border: none;
+  }
+}
 header .container .theme-switch {
   margin: 2rem 0;
   display: flex;
@@ -350,18 +356,25 @@ header .container .theme-switch {
 @media screen and (min-width: 48em) {
   header .container .theme-switch {
     margin: 1rem 1rem 0 0;
+    justify-content: baseline;
+    align-items: center;
+    gap: 2rem;
   }
 }
-
-.container {
+header .container {
   width: 85%;
   padding: 2rem 0;
   margin: 2rem auto;
 }
 @media screen and (min-width: 62.5em) {
-  .container {
+  header .container {
     width: 100%;
     padding: 2rem 0;
+  }
+}
+@media screen and (min-width: 48em) {
+  header .container {
+    display: flex;
   }
 }
 

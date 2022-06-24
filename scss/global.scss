@@ -13,6 +13,10 @@ header {
   .container .header-info {
     border-bottom: 1px solid $l-dark-gray-blue;
     padding-bottom: 2rem;
+    @include media(tab-port) {
+      flex-grow: 3;
+      border: none;
+    }
   }
   .container .theme-switch {
     margin: 2rem 0;
@@ -20,15 +24,21 @@ header {
     justify-content: space-between;
     @include media(tab-port) {
       margin: 1rem 1rem 0 0;
+      justify-content: baseline;
+      align-items: center;
+      gap: 2rem;
     }
   }
-}
-.container {
-  width: 85%;
-  @include media(desktop) {
-    width: 100%;
+  .container {
+    width: 85%;
+    @include media(desktop) {
+      width: 100%;
+      padding: 2rem 0;
+    }
+    @include media(tab-port) {
+      display: flex;
+    }
     padding: 2rem 0;
+    margin: 2rem auto;
   }
-  padding: 2rem 0;
-  margin: 2rem auto;
 }

@@ -7,7 +7,7 @@
     width: 7rem;
     height: 3rem;
     border-radius: 100px;
-    background-color: $l-dark-gray-blue;
+    background-image: $dark-theme;
     display: inline-block;
     position: relative;
     overflow: hidden;
@@ -24,7 +24,7 @@
       background-color: $color-white;
       margin-top: 0.2rem;
       margin-right: 0.3rem;
-
+      transform: translateX(4rem);
       transition: all 0.5s;
     }
     &::before {
@@ -38,19 +38,20 @@
       background-color: $color-black;
       margin-top: 0.2rem;
       margin-left: 0.3rem;
-      transform: translateX(-4rem);
+
       transition: all 0.5s;
     }
   }
   &__input:checked + &__button {
-    background-image: $dark-theme;
+    background-color: $l-dark-gray-blue;
+    background-image: none;
   }
   &__input:checked + &__button::after {
-    transform: translateX(4rem);
+    transform: translateX(0);
     margin-left: 0.3rem;
   }
   &__input:checked + &__button::before {
-    transform: translateX(0);
+    transform: translateX(-4rem);
     margin-left: 0.3rem;
   }
 }

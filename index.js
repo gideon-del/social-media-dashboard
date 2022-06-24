@@ -11,23 +11,22 @@ input.addEventListener("change", function (e) {
 input.addEventListener("click", function (e) {
   if (input.checked) {
     card.forEach((x) => {
-      x.classList.remove("card--light");
-      x.classList.add("card--dark");
-    });
-    cardMini.forEach((x) => {
-      x.classList.add("card-mini--dark");
-      x.classList.remove("card-mini--light");
-    });
-    body.classList.add("dark");
-  } else {
-    card.forEach((x) => {
-      x.classList.remove("card--dark");
       x.classList.add("card--light");
+      x.classList.remove("card--dark");
     });
     cardMini.forEach((x) => {
       x.classList.remove("card-mini--dark");
       x.classList.add("card-mini--light");
     });
-    body.classList.remove("dark");
+  } else {
+    card.forEach((x) => {
+      x.classList.add("card--dark");
+      x.classList.remove("card--light");
+    });
+    cardMini.forEach((x) => {
+      x.classList.add("card-mini--dark");
+      x.classList.remove("card-mini--light");
+    });
   }
+  body.classList.toggle("dark");
 });
