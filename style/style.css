@@ -32,10 +32,11 @@ body {
 }
 
 .header-secondary {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: hsl(230deg, 17%, 14%);
   margin-bottom: 0.6rem;
+  white-space: nowrap;
 }
 
 .paragraph {
@@ -183,13 +184,18 @@ body {
 
 .overview {
   max-width: 114rem;
-  padding: 2rem;
+  margin: 2rem auto 0;
+}
+@media screen and (min-width: 62.5em) {
+  .overview {
+    margin-top: 6rem;
+  }
 }
 .overview__card {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
-  margin-block: 4rem;
+  margin-top: 2rem;
 }
 @media screen and (min-width: 48em) {
   .overview__card {
@@ -210,6 +216,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin: 1rem 0.75rem;
+}
+@media screen and (min-width: 62.5em) {
+  .card-mini {
+    margin: 1rem auto;
+  }
 }
 .card-mini__top {
   justify-self: flex-end;
@@ -247,6 +259,7 @@ body {
 }
 .card-mini__p {
   font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 main {

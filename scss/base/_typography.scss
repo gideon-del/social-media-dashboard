@@ -6,12 +6,14 @@ body {
 .header-primary {
   font-size: 6rem;
   font-weight: $font-weight-7;
+  // white-space: nowrap;
 }
 .header-secondary {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: $font-weight-7;
   color: $l-vd-blue;
   margin-bottom: 0.6rem;
+  white-space: nowrap;
 }
 .paragraph {
   font-size: 1.6rem;
