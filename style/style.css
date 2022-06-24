@@ -90,7 +90,22 @@ body {
   margin: 1rem auto;
   border-radius: 7px;
   overflow: hidden;
+  position: relative;
   text-align: center;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.card:hover::after {
+  opacity: 1;
 }
 .card--light {
   background-color: hsl(227deg, 47%, 96%);
@@ -210,6 +225,11 @@ body {
   transform: translateX(0);
   margin-left: 0.3rem;
 }
+@media screen and (min-width: 48em) {
+  .switch__input:checked + .switch__button:hover {
+    background-image: linear-gradient(to right bottom, hsl(210deg, 78%, 56%), hsl(146deg, 68%, 55%));
+  }
+}
 .switch__input:checked + .switch__button::before {
   transform: translateX(-4rem);
   margin-left: 0.3rem;
@@ -271,10 +291,25 @@ body {
   width: 100%;
   margin-inline: auto;
   padding: 2.5rem 3rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin: 1rem 0.75rem;
+}
+.card-mini::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.card-mini:hover::after {
+  opacity: 1;
 }
 .card-mini--light {
   background-color: hsl(227deg, 47%, 96%);

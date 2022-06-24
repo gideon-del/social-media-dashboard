@@ -50,6 +50,12 @@
     transform: translateX(0);
     margin-left: 0.3rem;
   }
+  @include media(tab-port) {
+    &__input:checked + &__button:hover {
+      background-image: $dark-theme;
+    }
+  }
+
   &__input:checked + &__button::before {
     transform: translateX(-4rem);
     margin-left: 0.3rem;
